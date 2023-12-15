@@ -4,7 +4,6 @@ import 'package:lottie/lottie.dart';
 import 'package:trusted/utils/height_width_space.dart';
 import '../../utils/colors.dart';
 import 'package:text_divider/text_divider.dart';
-
 import '../../utils/images.dart';
 
 class Login_Page extends StatelessWidget {
@@ -64,16 +63,21 @@ class Login_Page extends StatelessWidget {
                   ),
                 ),
                 Height_Width.height_distan_size15,
-                Container(
-                  height: Get.height / 14,
-                  width: Get.width,
-                  decoration: BoxDecoration(
-                      color: ColorsCode.primary_color,
-                      borderRadius: BorderRadius.all(Radius.circular(12))),
-                  child: Center(
-                    child: Text(
-                      "LOGIN",
-                      style: TextStyle(color: ColorsCode.white_color, fontFamily: "Roboto", fontSize: 20),
+                GestureDetector(
+                  onTap: (){
+                    Get.toNamed('Home_Page');
+                  },
+                  child: Container(
+                    height: Get.height / 14,
+                    width: Get.width,
+                    decoration: BoxDecoration(
+                        color: ColorsCode.primary_color,
+                        borderRadius: BorderRadius.all(Radius.circular(12))),
+                    child: Center(
+                      child: Text(
+                        "LOGIN",
+                        style: TextStyle(color: ColorsCode.white_color, fontFamily: "Roboto", fontSize: 20),
+                      ),
                     ),
                   ),
                 ),
@@ -86,7 +90,6 @@ class Login_Page extends StatelessWidget {
                 Height_Width.height_distan_size20,
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          
                   children: [
                     Container(
                       height: Get.height / 18,
