@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "553657626183",
+    "project_id": "trusted-2a11f",
+    "storage_bucket": "trusted-2a11f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:553657626183:android:e4a1b16b8d12a9ad60cb62",
+        "android_client_info": {
+          "package_name": "com.example.trusted"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWq69racKNaepyfspS1jGapJx8bTsIsGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

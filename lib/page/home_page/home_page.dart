@@ -18,11 +18,7 @@ class Home_Page extends StatelessWidget {
         key: _drawer,
         appBar: AppBar(
           backgroundColor: ColorsCode.primary_color,
-          title: Text(
-            "Trusted",
-            style: TextStyle(
-                color: ColorsCode.white_color, fontFamily: "Roboto", fontSize: 18),
-          ),
+          title: White_text("Trusted"),
           leading: IconButton(onPressed: (){
             _drawer.currentState!.openDrawer();
           }, icon: Icon(Icons.menu, size: 20,color: ColorsCode.white_color,)),
@@ -43,7 +39,7 @@ class Home_Page extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: ColorsCode.red_color,
                           borderRadius: BorderRadius.all(Radius.circular(12))),
-                      child: Center(child: Text("Buy", style: TextStyle(color: ColorsCode.white_color, fontFamily: "Roboto", fontSize: 16),))
+                      child: Center(child: White_text("Buy"))
                   ),
                   Container(
                       height: Get.height / 18,
@@ -51,7 +47,7 @@ class Home_Page extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: ColorsCode.red_color,
                           borderRadius: BorderRadius.all(Radius.circular(12))),
-                      child: Center(child: Text("Sell", style: TextStyle(color: ColorsCode.white_color, fontFamily: "Roboto", fontSize: 16),))
+                      child: Center(child: White_text("Sell"))
                   ),
                   Container(
                       height: Get.height / 18,
@@ -59,7 +55,7 @@ class Home_Page extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: ColorsCode.primary_color,
                           borderRadius: BorderRadius.all(Radius.circular(12))),
-                      child: Center(child: Text("P2P", style: TextStyle(color: ColorsCode.white_color, fontFamily: "Roboto", fontSize: 16),))
+                      child: Center(child: White_text("P2P"))
                   ),
                 ],
               ),

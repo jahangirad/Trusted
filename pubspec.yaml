@@ -38,6 +38,7 @@ dependencies:
   get: ^4.6.6
   lottie: ^2.7.0
   text_divider: ^1.0.0
+  firebase_core: ^2.24.2
 
 dev_dependencies:
   flutter_test:
