@@ -35,7 +35,6 @@ class Drawer_Page extends StatelessWidget {
               color: ColorsCode.white_color,
             ),
             Height_Width.height_distan_size10,
-
           ],
         ),
       ),
