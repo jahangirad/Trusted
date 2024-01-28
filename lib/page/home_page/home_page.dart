@@ -49,13 +49,18 @@ class Home_Page extends StatelessWidget {
                           borderRadius: BorderRadius.all(Radius.circular(12))),
                       child: Center(child: White_text("Sell"))
                   ),
-                  Container(
-                      height: Get.height / 18,
-                      width: Get.width / 3.5,
-                      decoration: BoxDecoration(
-                          color: ColorsCode.primary_color,
-                          borderRadius: BorderRadius.all(Radius.circular(12))),
-                      child: Center(child: White_text("P2P"))
+                  GestureDetector(
+                    onTap: (){
+                      Get.toNamed('P2P_Create_Page');
+                    },
+                    child: Container(
+                        height: Get.height / 18,
+                        width: Get.width / 3.5,
+                        decoration: BoxDecoration(
+                            color: ColorsCode.primary_color,
+                            borderRadius: BorderRadius.all(Radius.circular(12))),
+                        child: Center(child: White_text("P2P"))
+                    ),
                   ),
                 ],
               ),

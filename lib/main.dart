@@ -6,6 +6,7 @@ import 'firebase_options.dart';
 import 'page/drawer_page/drawer_page.dart';
 import 'page/home_page/home_page.dart';
 import 'page/login_page/login.dart';
+import 'page/p2p_page/p2p_create_page.dart';
 
 
 void main()async{
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         'Login_Page': (context) => const Login_Page(),
         'Home_Page': (context) => Home_Page(),
         'Drawer_Page': (context) => Drawer_Page(),
+        'P2P_Create_Page': (context) => P2P_Create_Page(),
       },
     );
   }
