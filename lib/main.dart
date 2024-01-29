@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:zego_zimkit/zego_zimkit.dart';
 import 'firebase_options.dart';
+import 'page/buy_sell_page/buy_sell_page.dart';
 import 'page/drawer_page/drawer_page.dart';
 import 'page/home_page/home_page.dart';
 import 'page/login_page/login.dart';
+import 'page/m2m_page/m2m_page.dart';
 import 'page/p2p_page/p2p_create_page.dart';
 
 
@@ -35,6 +37,8 @@ class MyApp extends StatelessWidget {
         'Home_Page': (context) => Home_Page(),
         'Drawer_Page': (context) => Drawer_Page(),
         'P2P_Create_Page': (context) => P2P_Create_Page(),
+        'Buy_Sell': (context) => Buy_Sell(),
+        'M2M_Page': (context) => M2M_Page(),
       },
     );
   }

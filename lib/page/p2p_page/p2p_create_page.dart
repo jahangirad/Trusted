@@ -6,6 +6,7 @@ import '../../utils/colors.dart';
 import '../../widgets/custom_text.dart';
 import '../../widgets/uid_create_and_button.dart';
 import '../drawer_page/drawer_page.dart';
+import '../../widgets/floating_Action_Button.dart';
 
 class P2P_Create_Page extends StatefulWidget {
   P2P_Create_Page({super.key});
@@ -21,6 +22,7 @@ class _P2P_Create_PageState extends State<P2P_Create_Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: Floating_Action_Button(),
       key: _drawer,
       appBar: AppBar(
         backgroundColor: ColorsCode.primary_color,
@@ -73,9 +75,10 @@ class _P2P_Create_PageState extends State<P2P_Create_Page> {
                 ),
                 Height_Width.height_distan_size10,
                 Conditon_text("১. নিচের ফাঁকা ঘরে ৪-৫ টি সংখ্যা বসাবেন।"),
-                Conditon_text("২. আপনার দেওয়া সংখ্যাগুলো বিপরীত পক্ষকে পাঠাবেন।"),
-                Conditon_text("৩. বিপরীত পক্ষকে অ্যাপটি ইন্সটল করতে হবে।"),
-                Conditon_text("৪. বিপরীত পক্ষ উপরের (+) ক্লিক করে। সংখ্যাগুলো ব্যবহার করে আপনার সাথে কথা বলতে পারবে।"),
+                Conditon_text("২. আপনার দেওয়া সংখ্যাগুলো বিপরীত পক্ষ ও সাপোর্ট টিমকে পাঠাবেন।"),
+                Conditon_text("৩. সাপোর্ট টিম থেকে উত্তর পাওয়ার পর লেনদেন করবেন।"),
+                Conditon_text("৪. বিপরীত পক্ষকে অ্যাপটি ইন্সটল করতে হবে।"),
+                Conditon_text("৫. বিপরীত পক্ষ উপরের (+) ক্লিক করে। সংখ্যাগুলো ব্যবহার করে আপনার সাথে কথা বলতে পারবে।"),
                 Conditon_text("[বিঃদ্রঃ আমাদের দেওয়া অ্যাকাউন্টের মাধ্যমে লেনদেন করবেন। অন্যথায় কর্তিপক্ষ দায়ি না।]"),
                 Height_Width.height_distan_size10,
                 UID_Create()
