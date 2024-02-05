@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:text_divider/text_divider.dart';
 import 'package:trusted/utils/height_width_space.dart';
+import 'package:zego_zimkit/zego_zimkit.dart';
 import '../../utils/colors.dart';
 import '../../widgets/custom_text.dart';
 import '../../widgets/uid_create_and_button.dart';
 import '../drawer_page/drawer_page.dart';
 import '../../widgets/floating_Action_Button.dart';
+
+
 
 class P2P_Create_Page extends StatefulWidget {
   P2P_Create_Page({super.key});
@@ -16,6 +18,10 @@ class P2P_Create_Page extends StatefulWidget {
 }
 
 class _P2P_Create_PageState extends State<P2P_Create_Page> {
+
+  final _formKey = GlobalKey<FormState>();
+  TextEditingController userID = TextEditingController();
+  TextEditingController userName = TextEditingController();
   final GlobalKey<ScaffoldState> _drawer = GlobalKey<ScaffoldState>();
 
 
@@ -31,33 +37,6 @@ class _P2P_Create_PageState extends State<P2P_Create_Page> {
           _drawer.currentState!.openDrawer();
         }, icon: Icon(Icons.menu, size: 20,color: ColorsCode.white_color,)),
         centerTitle: true,
-        actions: [
-          PopupMenuButton(
-              icon: Icon(Icons.add_circle_outline_rounded, size: 20, color: ColorsCode.white_color,),
-              itemBuilder: (context){
-            return [
-              PopupMenuItem(
-                value: "Join Chat",
-                  child: ListTile(
-                    title: Join_text("Join Chat"),
-                  ),
-                onTap: (){
-                  showDialog(context: context, builder: (context){
-                    return SingleChildScrollView(
-                      child: AlertDialog(
-                        content: Container(
-                          height: Get.height / 2.5,
-                          width: Get.width / 2,
-                          child: UID_Create(),
-                        )
-                      ),
-                    );
-                  });
-                },
-              )
-            ];
-          })
-        ],
       ),
       drawer: Drawer_Page(),
       body: SafeArea(

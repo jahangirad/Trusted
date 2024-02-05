@@ -140,38 +140,11 @@ class _Home_PageState extends State<Home_Page> {
               Height_Width.height_distan_size20,
               TextDivider.horizontal(
                 text: const Text(
-                  'Today Rate',
+                  'মনোযোগ সহকারে পড়ুন',
                   style: TextStyle(fontFamily: "Roboto", fontSize: 15),
                 ),
                 color: Colors.black45,
                 thickness: 3.0,
-              ),
-              Height_Width.height_distan_size20,
-              Table(
-                defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-                border: TableBorder.all(),
-                children: [
-                  TableRow(children: [
-                    Center(child: Custom_text("Name")),
-                    Center(child: Custom_text("Buy")),
-                    Center(child: Custom_text("Sell")),
-                  ]),
-                  TableRow(children: [
-                    Center(child: Table_Row_text("Perfect\nMoney")),
-                    Center(child: Table_Row_text("10 BDT")),
-                    Center(child: Table_Row_text("20 BDT")),
-                  ]),
-                  TableRow(children: [
-                    Center(child: Table_Row_text("Tether TRC20\nUSDT")),
-                    Center(child: Table_Row_text("10 BDT")),
-                    Center(child: Table_Row_text("20 BDT")),
-                  ]),
-                  TableRow(children: [
-                    Center(child: Table_Row_text("Binance\nUSDT")),
-                    Center(child: Table_Row_text("10 BDT")),
-                    Center(child: Table_Row_text("20 BDT")),
-                  ]),
-                ],
               ),
               Height_Width.height_distan_size20,
               Conditon_text("১. বাই-সেল অপশনে কারেন্সি বাই-সেল করতে পাবেন।"),
