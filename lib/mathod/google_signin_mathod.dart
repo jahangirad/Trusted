@@ -13,7 +13,6 @@ class GoogleAuthController extends GetxController {
   late RxString userPhotoUrl = ''.obs;
   final box = GetStorage();
 
-
   Future<UserCredential> handleSignIn() async {
     try {
       GoogleSignInAccount? googleSignInAccount = await googleSignIn.signIn();
@@ -28,12 +27,8 @@ class GoogleAuthController extends GetxController {
       UserCredential userCredential = await _auth.signInWithCredential(credential);
 
       // Access user information
-      // userName.value = userCredential.user?.displayName ?? "No Name";
-      // userPhotoUrl.value = userCredential.user?.photoURL ?? "";
       box.write("userName", userCredential.user?.displayName ?? "No Name");
       box.write("userPhotoUrl", userCredential.user?.photoURL ?? "");
-      userPhotoUrl = box.read("userPhotoUrl");
-      userName = box.read("userName");
       print(box.read("userPhotoUrl"));
       print(box.read("userName"));
 
@@ -42,6 +37,7 @@ class GoogleAuthController extends GetxController {
       return Future.error(error.toString());
     }
   }
+
   void navigateToHomeScreen(BuildContext context) {
     Get.toNamed('Home_Page');
   }

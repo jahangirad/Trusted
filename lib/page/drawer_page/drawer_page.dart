@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:trusted/utils/height_width_space.dart';
+import '../../mathod/facebook_signin_mathod.dart';
 import '../../mathod/google_signin_mathod.dart';
 import '../../utils/colors.dart';
 import '../../utils/images.dart';
@@ -16,6 +17,27 @@ class Drawer_Page extends StatefulWidget {
 class _Drawer_PageState extends State<Drawer_Page> {
 
   GoogleAuthController gmail_control = Get.put(GoogleAuthController());
+  FacebookAuthController fb_control = Get.put(FacebookAuthController());
+  late String gmailUserName;
+  late String gmailUserPhotoUrl;
+  late String fbUserName;
+  late String fbUserPhotoUrl;
+
+  Future datastore()async{
+    setState(() {
+      gmailUserPhotoUrl = gmail_control.box.read("userPhotoUrl");
+      gmailUserName = gmail_control.box.read("userName");
+      fbUserPhotoUrl = fb_control.box.read("userPhotoUrl");
+      fbUserName = fb_control.box.read("userName");
+    });
+  }
+
+  @override
+  void initState() {
+    datastore();
+    super.initState();
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -28,16 +50,18 @@ class _Drawer_PageState extends State<Drawer_Page> {
           child: Column(
             children: [
               Height_Width.height_distan_size20,
-              Obx(() => CircleAvatar(
+              CircleAvatar(
                 radius: 50,
                 backgroundImage: NetworkImage(
-                  gmail_control.userPhotoUrl.value.toString(),
+                    gmailUserPhotoUrl.isEmpty ? fbUserPhotoUrl.toString() : gmailUserPhotoUrl.toString()
                 ),
-              )),
+              ),
               Height_Width.height_distan_size15,
-              Obx(() => White_text(
-                "Hi, ${gmail_control.userName.value.toString()}",
-              )),
+              White_text(
+                "Hi, ${
+                    gmailUserName.isEmpty ? fbUserName.toString() : gmailUserName.toString()
+                }",
+              ),
               Height_Width.height_distan_size2,
               Divider(
                 height: 3,
