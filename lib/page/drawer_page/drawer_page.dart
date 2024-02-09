@@ -16,13 +16,16 @@ class Drawer_Page extends StatefulWidget {
 
 class _Drawer_PageState extends State<Drawer_Page> {
 
-  GoogleAuthController gmail_control = Get.put(GoogleAuthController());
-  FacebookAuthController fb_control = Get.put(FacebookAuthController());
+  GoogleAuthController gmail_control = Get.put(GoogleAuthController()); //Gmail Singin mathod Get here
+  FacebookAuthController fb_control = Get.put(FacebookAuthController()); //Facebook Singin mathod Get here
+
   late String gmailUserName;
   late String gmailUserPhotoUrl;
   late String fbUserName;
   late String fbUserPhotoUrl;
 
+
+// This Function use for Data Store in variable. This package name is get Storage
   Future datastore()async{
     setState(() {
       gmailUserPhotoUrl = gmail_control.box.read("userPhotoUrl");
@@ -32,6 +35,7 @@ class _Drawer_PageState extends State<Drawer_Page> {
     });
   }
 
+// This Function use for continue call datastore Function
   @override
   void initState() {
     datastore();
@@ -49,16 +53,19 @@ class _Drawer_PageState extends State<Drawer_Page> {
           color: ColorsCode.black_color,
           child: Column(
             children: [
-              Height_Width.height_distan_size20,
+              Height_Width.height_distan_size20, //Custom Height
               CircleAvatar(
                 radius: 50,
                 backgroundImage: NetworkImage(
+                  // It is a if else conditon
                     gmailUserPhotoUrl.isEmpty ? fbUserPhotoUrl.toString() : gmailUserPhotoUrl.toString()
                 ),
               ),
-              Height_Width.height_distan_size15,
+              Height_Width.height_distan_size15, //Custom Height
+              // White_text is a custom widgets
               White_text(
                 "Hi, ${
+                // It is a if else conditon
                     gmailUserName.isEmpty ? fbUserName.toString() : gmailUserName.toString()
                 }",
               ),
@@ -70,9 +77,9 @@ class _Drawer_PageState extends State<Drawer_Page> {
               Height_Width.height_distan_size10,
               ListTile(
                 onTap: (){
-                  Get.toNamed('P2P_Create_Page');
+                  Get.toNamed('P2P_Create_Page'); //Navigate with Name
                 },
-                title: White_text("P2P"),
+                title: White_text("P2P"), //Custom Widgets
                 leading: Image.asset(Images.p2p, height: 30, width: 30,),
               ),
               Height_Width.height_distan_size5,

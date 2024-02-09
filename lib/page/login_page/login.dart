@@ -71,6 +71,7 @@ class Login_Page extends StatelessWidget {
                 Height_Width.height_distan_size15,
                 GestureDetector(
                   onTap: (){
+                    //UserCheck and Navigate another page Function
                     FirebaseAuth.instance.authStateChanges().listen((User? user) {
                       if (user != null) {
                         Get.offNamed('Home_Page');
@@ -103,6 +104,7 @@ class Login_Page extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: (){
+                        //Its call Gmail Signin mathod
                           control_gmail.handleSignIn();
                       },
                       child: Container(
@@ -125,6 +127,7 @@ class Login_Page extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: (){
+                        //Its call Facebook Signin mathod
                           control_fb.handleFacebookSignIn();
                       },
                       child: Container(

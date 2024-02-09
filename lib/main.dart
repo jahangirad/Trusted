@@ -37,6 +37,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
+    //UserCheck and Navigate another page Function
     FirebaseAuth.instance.authStateChanges().listen((User? user) {
       if (user != null) {
         Get.offNamed('Home_Page');

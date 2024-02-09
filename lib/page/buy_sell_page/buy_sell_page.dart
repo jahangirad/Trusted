@@ -16,12 +16,12 @@ class Buy_Sell extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: Floating_Action_Button(),
-      key: _drawer,
+      key: _drawer, //it is a Globalkey
       appBar: AppBar(
         backgroundColor: ColorsCode.primary_color,
         title: White_text("Buy and Sell"),
         leading: IconButton(onPressed: (){
-          _drawer.currentState!.openDrawer();
+          _drawer.currentState!.openDrawer(); //its useing for Drawer Open
         }, icon: Icon(Icons.menu, size: 20,color: ColorsCode.white_color,)),
         centerTitle: true,
       ),
@@ -33,17 +33,17 @@ class Buy_Sell extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Height_Width.height_distan_size20,
+                Height_Width.height_distan_size20, //its custom heignt
                 TextDivider.horizontal(
                   text: const Text('মনোযোগ সহকারে পড়ুন', style: TextStyle(fontFamily: "Roboto", fontSize: 20),),
                   color: Colors.black45,
                   thickness: 3.0,
                 ),
-                Height_Width.height_distan_size10,
+                Height_Width.height_distan_size10, //its custom heignt
                 Conditon_text("১. বাই-সেল করতে।"),
                 Conditon_text("২. আপনাকে সাপোর্ট টিমের সাথে কথা বলতে হবে।"),
                 Conditon_text("৩. সাপোর্ট টিমের নির্দেশনা অনুযায়ী কাজ করবেন।"),
-                Height_Width.height_distan_size10,
+                Height_Width.height_distan_size10, //its custom heignt
               ],
             ),
           ),
